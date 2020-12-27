@@ -20,3 +20,9 @@ result[1]="$compute2"
 result[2]="$compute3"
 result[3]="$compute4"
 
+declare -a resultArray
+
+resultArray[0]="${result[0]}"
+resultArray[1]="${result[1]}"
+resultArray[2]="${result[2]}"
+resultArray[3]="${result[3]}"
