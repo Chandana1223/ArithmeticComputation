@@ -40,3 +40,18 @@ do
       fi
    done
 done
+
+for (( i=0;i<$arrayLength;i++ ))
+do
+   for (( j=i+1;j<$arrayLength;j++ ))
+   do
+      if [ ${resultArray[i]} -gt ${resultArray[j]} ];
+      then
+         temp=${resultArray[i]};
+         resultArray[$i]=${resultArray[j]};
+         resultArray[$j]=$temp;
+      fi
+   done
+done
+
+echo ${resultArray[@]};
